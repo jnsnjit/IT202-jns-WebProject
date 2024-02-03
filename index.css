@@ -1,0 +1,27 @@
+header,body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #FF3352;
+}
+
+footer{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #FFCCAD;
+}
+
+a[href]{
+    color:darkorange;
+}
+
+body{
+    border: 2px dotted black;
+    margin: 15px;
+}
+.main{
+    border: 2px solid black;
+    width: 800px;
+    margin: 20px;
+    padding: 10px;
+}
+h1, h2{
+    padding-left: 15px;
+}
