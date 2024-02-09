@@ -14,6 +14,7 @@
     </header>
     <body>
         <?php include("header.php"); ?>
+        <!-- form for shipping request -->
         <form action="shipping_result.php" method="post">
             <label>First Name: </label>
             <input type="text"name="first_name" value="<?php echo htmlspecialchars($first_name); ?>"/>
@@ -30,19 +31,9 @@
             <label>Zip Code</label>
             <input type="text"name="zipcode" value="<?php echo htmlspecialchars($zipcode); ?>" />
             <br>
+            <!-- submit button -->
             <input type="submit" class="button" />
         </form>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <?php include("footer.php"); ?>
     </body>
 </html>
