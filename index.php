@@ -2,7 +2,7 @@
     <head>
        <title>Blockitic Inc</title>
        <!-- link to stylesheet -->
-       <link rel="stylesheet" href="index.css" />
+       <link rel="stylesheet" href="style.css" />
     </head>
     <body >
         <?php include("header.php"); ?>
@@ -17,6 +17,11 @@
         <img src="mogbie.jpg" style="float:left; margin-left:50px; margin-right:25px;" alt= "bad image" width="75"/>
         <img src="zatan.jpg" style="float:left; margin-left:25px; margin-right:25px;" alt= "bad image" width="75"/>
         <img src="duopoly.jpg" style="float:left; margin-left:25px; margin-right:50px;" alt= "bad image" width="75"/>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <?php include("footer.php"); ?>
     </body>
 </html>

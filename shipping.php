@@ -10,7 +10,7 @@
 <html>
     <header>
         <title>Shipping Address Page</title>
-        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="style.css" />
     </header>
     <body>
         <?php include("header.php"); ?>
@@ -29,7 +29,7 @@
             <input type="text"name="city" value="<?php echo htmlspecialchars($city); ?>"/>
             <br>
             <label>Zip Code</label>
-            <input type="text"name="zipcode" value="<?php echo htmlspecialchars($zipcode); ?>" />
+            <input type="number"name="zipcode" value="<?php echo htmlspecialchars($zipcode); ?>" />
             <br>
             <!-- submit button -->
             <input type="submit" class="button" />
