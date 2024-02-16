@@ -48,3 +48,9 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+.images{
+    text-align: center;
+    height: 300px;
+    border: solid black 10px;
+}

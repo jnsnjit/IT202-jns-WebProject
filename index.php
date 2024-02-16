@@ -1,10 +1,13 @@
+<!--
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 1 jns@njit.edu
+-->
 <html>
     <head>
        <title>Blockitic Inc</title>
        <!-- link to stylesheet -->
        <link rel="stylesheet" href="style.css" />
     </head>
-    <body >
+    <body>
         <?php include("header.php"); ?>
         <h1>About Us:</h1>
         <!-- mission statement -->
@@ -14,9 +17,9 @@
         <br>
         <br>
         <!-- images -->
-        <img src="mogbie.jpg" style="float:left; margin-left:50px; margin-right:25px;" alt= "bad image" width="75"/>
-        <img src="zatan.jpg" style="float:left; margin-left:25px; margin-right:25px;" alt= "bad image" width="75"/>
-        <img src="duopoly.jpg" style="float:left; margin-left:25px; margin-right:50px;" alt= "bad image" width="75"/>
+        <img class="images" src="mogbie.jpg" style="float:left; margin-left:50px; margin-right:25px;" alt= "bad image" width="75"/>
+        <img class="images" src="zatan.jpg" style="float:left; margin-left:25px; margin-right:25px;" alt= "bad image" width="75"/>
+        <img class="images" src="duopoly.jpg" style="float:left; margin-left:25px; margin-right:50px;" alt= "bad image" width="75"/>
         <br>
         <br>
         <br>

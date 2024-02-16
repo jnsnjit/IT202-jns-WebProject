@@ -13,19 +13,19 @@
     $error_message = '';
     // validate investment
   if ($price === FALSE) {
-    $error_message .= 'Price must be a valid number.<br>';
+    $error_message .= 'Price must be a valid number. <br>';
   } else if ( $price > 1000 ){
-    $error_message .= 'Price must be a less then 1000$.<br>';
+    $error_message .= 'Price must be a less then 1000$. <br>';
   } else if ($price <= 0){
-    $error_message .= 'Price must be greater than zero.<br>';
+    $error_message .= 'Price must be greater than zero. <br>';
   }
 
   if ($dimensions === FALSE) {
     $error_message .= 'Dimensions must be a valid number.<br>';
   } else if ( $dimensions <= 0 ){
-    $error_message .= 'Dimensions must be a valid number.<br>';
+    $error_message .= 'Dimensions must be a valid number. <br>';
   } else if ( $dimensions > 36){
-    $error_message .= 'Dimensions must be less then 36 inches';
+    $error_message .= 'Dimensions must be less then 36 inches <br>';
   }
 
   if ($zipcode === FALSE) {
