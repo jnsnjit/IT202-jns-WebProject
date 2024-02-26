@@ -1,3 +1,6 @@
+<!--
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+-->
 <head>
     <link rel="stylesheet" href="style.css" />
 </head>

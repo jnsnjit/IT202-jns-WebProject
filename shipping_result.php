@@ -1,4 +1,6 @@
-
+<!--
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+-->
 <?php
     $first_name = filter_input(INPUT_POST, 'first_name', FILTER_DEFAULT);
     $last_name = filter_input(INPUT_POST, 'last_name', FILTER_DEFAULT);
@@ -11,7 +13,7 @@
     $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
 
     $error_message = '';
-    // validate investment
+    // validate price
   if ($price === FALSE) {
     $error_message .= 'Price must be a valid number. <br>';
   } else if ( $price > 1000 ){
