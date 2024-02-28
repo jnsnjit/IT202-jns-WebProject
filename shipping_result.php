@@ -93,7 +93,7 @@
         <label>Total Price:</label>
         <span><?php echo $price; ?></span>
         <br>
-        <img src="barcode.png" alt= "bad image" width="75"/> 
+        <img src="images/barcode.png" alt= "bad image" width="75"/> 
         <?php include("footer.php"); ?>
     </body>
 </html>
