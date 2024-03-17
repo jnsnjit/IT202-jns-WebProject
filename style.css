@@ -1,5 +1,5 @@
 /*
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
 */
 header,body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -28,7 +28,7 @@ h1, h2{
 img{
     size: 150px;
 }
-ul {
+ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -36,11 +36,11 @@ ul {
     background-color: #333;
 }
   
-li {
+li{
     float: left;
 }
   
-li a {
+li a{
     display: block;
     color: white;
     text-align: center;
@@ -48,7 +48,7 @@ li a {
     text-decoration: none;
 }
   
-li a:hover {
+li a:hover{
     background-color: #111;
 }
 

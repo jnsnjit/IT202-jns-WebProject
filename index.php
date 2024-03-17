@@ -1,11 +1,11 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
 -->
 <html>
     <head>
        <title>Blockitic Inc</title>
        <!-- link to stylesheet -->
-       <link rel="stylesheet" href="style.css" />
+       <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
         <?php include("header.php"); ?>

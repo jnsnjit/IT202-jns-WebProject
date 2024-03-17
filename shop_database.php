@@ -1,6 +1,7 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
 -->
+
 <?php
 require_once('database_njit.php');
 

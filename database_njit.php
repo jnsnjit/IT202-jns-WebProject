@@ -1,5 +1,5 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
 -->
 <?php
 //creates a PDO object in order to open my njit sql server
@@ -11,7 +11,7 @@ try{
     //echo '<p>you are connected to the njit database!</p>';
 } catch(PDOException $ex) {
     $error_message = $ex->getMessage();
-    include('database_error.php');
+    //include('database_error.php');
     exit();
 }
 ?>

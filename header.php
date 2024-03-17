@@ -1,5 +1,5 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 2 jns@njit.edu
+    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
 -->
 <head>
     <link rel="stylesheet" href="style.css" />
@@ -12,6 +12,7 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="shipping.php">Shipping</a></li>
         <li><a href="shop_database.php">Toy List</a></li>
+        <li><a href="create.php">Create a Toy</a></li>
     </ul>
     <br>
 </header>
