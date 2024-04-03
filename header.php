@@ -13,6 +13,8 @@
         <li><a href="shipping.php">Shipping</a></li>
         <li><a href="shop_database.php">Toy List</a></li>
         <li><a href="create.php">Create a Toy</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="logout.php">Logout</a></li>
     </ul>
     <br>
 </header>
