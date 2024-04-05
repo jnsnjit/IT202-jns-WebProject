@@ -1,10 +1,10 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
+    Jimmy Silva, 4/4/2024, IT202-006, Web Project Phase 4 jns@njit.edu
 -->
 
 <?php 
 if (!isset($login_message)) {
-$login_message = 'You must login to view this page.';
+$login_message = ' ';
 }
 ?>
 
@@ -19,10 +19,10 @@ $login_message = 'You must login to view this page.';
    <h1>Login</h1>
    <form action="authenticate.php" method="post">
      <label>Email:</label>
-     <input type="text" name="email" value="">
+     <input type="text" name="username" value="">
      <br>
      <label>Password:</label>
-     <input type="password" name="password" value="">
+     <input type="password" name="passwrd" value="">
      <br>
      <input type="submit" value="Login">
    </form>

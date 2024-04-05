@@ -1,9 +1,11 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
+    Jimmy Silva, 4/4/2024, IT202-006, Web Project Phase 4 jns@njit.edu
 -->
 <?php
 require_once('database_njit.php');
 // check var
+//check session now
+require_once('check_login.php');
 
 if( !isset($toyCode)) { $toyCode = ''; }
 if( !isset($toyName)) { $toyName = ''; }
@@ -16,20 +18,18 @@ $toyCategory_ID = filter_input(INPUT_GET, 'toy_category_id', FILTER_VALIDATE_INT
 if ($toyCategory_ID == NULL || $toyCategory_ID == FALSE) {
   $toyCategory_ID = 1;
 }
-
+    
 // Get name for selected category
-$queryToyCategory = 'SELECT * FROM toyCategories
-          WHERE toyCategoryID = :toy_category_id';
+$queryToyCategory = 'SELECT * FROM toyCategories WHERE toyCategoryID = :toy_category_id';
 $statement1 = $db->prepare($queryToyCategory);
 $statement1->bindValue(':toy_category_id', $toyCategory_ID);
 $statement1->execute();
 $category = $statement1->fetch();
 $category_name = $category['toyCategoryName'];
 $statement1->closeCursor();
-
+    
 // Get all categories
-$queryAllCategories = 'SELECT * FROM toyCategories
-             ORDER BY toyCategoryID';
+$queryAllCategories = 'SELECT * FROM toyCategories ORDER BY toyCategoryID';
 $statement2 = $db->prepare($queryAllCategories);
 $statement2->execute();
 $categories = $statement2->fetchAll();

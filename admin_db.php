@@ -1,13 +1,16 @@
+<!--
+    Jimmy Silva, 4/4/2024, IT202-006, Web Project Phase 4 jns@njit.edu
+-->
 <?php
 
-function is_valid_admin_login($email, $password) {
+function is_valid_user($user, $pass) {
     require_once('database_njit.php');
 
-    $query = 'SELECT password FROM toyAuth WHERE username = :username';
+    $query = 'SELECT passwrd FROM toyAuth WHERE username = :username';
   
     $statement = $db->prepare($query);
   
-    $statement->bindValue(':username', $email);
+    $statement->bindValue(':username', $user);
   
     $statement->execute();
   
@@ -23,7 +26,8 @@ function is_valid_admin_login($email, $password) {
   
       $hash = $row['passwrd'];
   
-      return password_verify(hash('md5',$password), $hash);
+      //return password_verify(hash('md5',$pass), $hash);
+      return password_verify($pass, $hash);
   
     }
 }

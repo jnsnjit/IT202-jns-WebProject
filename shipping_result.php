@@ -1,7 +1,10 @@
 <!--
-    Jimmy Silva, 2/14/2024, IT202-006, Web Project Phase 3 jns@njit.edu
+    Jimmy Silva, 4/4/2024, IT202-006, Web Project Phase 4 jns@njit.edu
 -->
 <?php
+    //check session
+    require_once('check_login.php');
+
     $first_name = filter_input(INPUT_POST, 'first_name', FILTER_DEFAULT);
     $last_name = filter_input(INPUT_POST, 'last_name', FILTER_DEFAULT);
     $city = filter_input(INPUT_POST, 'city', FILTER_DEFAULT);
