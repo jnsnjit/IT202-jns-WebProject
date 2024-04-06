@@ -4,6 +4,7 @@
 <?php
 include("check_login.php");
 ?>
+
 <html>
     <head>
        <title>Blockitic Inc</title>

@@ -19,7 +19,7 @@ $login_message = ' ';
    <h1>Login</h1>
    <form action="authenticate.php" method="post">
      <label>Email:</label>
-     <input type="text" name="username" value="">
+     <input type="text" name="email" value="">
      <br>
      <label>Password:</label>
      <input type="password" name="passwrd" value="">

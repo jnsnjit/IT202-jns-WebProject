@@ -3,32 +3,32 @@
 -->
 <?php
 
-function is_valid_user($user, $pass) {
-    require_once('database_njit.php');
+function is_valid($email, $pass) {
+  require_once('database_njit.php');
 
-    $query = 'SELECT passwrd FROM toyAuth WHERE username = :username';
-  
-    $statement = $db->prepare($query);
-  
-    $statement->bindValue(':username', $user);
-  
-    $statement->execute();
-  
-    $row = $statement->fetch();
-  
-    $statement->closeCursor();  
-  
-    if ($row === false) {
-  
-      return false;
-  
-    } else {
-  
-      $hash = $row['passwrd'];
-  
-      //return password_verify(hash('md5',$pass), $hash);
-      return password_verify($pass, $hash);
-  
-    }
+  $db = getDB();
+
+  $query = 'SELECT passwrd FROM toyAuth WHERE email = :email';
+
+  $statement = $db->prepare($query);
+
+  $statement->bindValue(':email', $email);
+
+  $statement->execute();
+
+  $row = $statement->fetch();
+
+  $statement->closeCursor();  
+
+  if ($row === false) {
+
+    return false;
+
+  } else {
+
+    $hash = $row['passwrd'];
+    //return $hash;
+    return password_verify($pass, $hash);
+  }
 }
 ?>

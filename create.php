@@ -6,6 +6,7 @@ require_once('database_njit.php');
 // check var
 //check session now
 require_once('check_login.php');
+$db = getDB();
 
 if( !isset($toyCode)) { $toyCode = ''; }
 if( !isset($toyName)) { $toyName = ''; }

@@ -4,6 +4,7 @@
 
 <?php
 require_once('database_njit.php');
+$db = getDB();
 session_start();
 //get cate
 $toyCategory_ID = filter_input(INPUT_GET, 'toy_category_id', FILTER_VALIDATE_INT);
@@ -87,6 +88,11 @@ $statement3->closeCursor();
         <td><?php echo $t['price']; ?></td>
         <td><?php echo $t['onSale']; ?></td>
         <td><?php echo $t['description']; ?></td>
+        <?php if(isset($_SESSION['is_valid_user'])) : ?>
+        <td><form action="delete_toy.php" method="post">
+          <input type="hidden" name="toy_id" value="<?php echo $t['toyID']; ?>">
+          <input type="submit" value="Delete">
+        </form></td><?php endif ?>
       </tr>
       <?php endforeach; ?>      
     </table>

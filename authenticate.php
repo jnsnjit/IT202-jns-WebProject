@@ -8,29 +8,46 @@ require_once('admin_db.php');
 session_start();
 
 
-$username = filter_input(INPUT_POST, 'username');
+$email = filter_input(INPUT_POST, 'email');
 
 $password = filter_input(INPUT_POST, 'passwrd');
 
-if (is_valid_user($username, $password)) {
+if (is_valid($email,$password)) {
 
   $_SESSION['is_valid_user'] = true;
 
   // redirect logged in user to default page
 
-  echo "<p>You have successfully logged in.</p>";
+  $db = getDB();
 
-  include('login.php');
+  $query = 'SELECT firstName,lastName FROM toyAuth WHERE email = :email';
+
+  $statement = $db->prepare($query);
+
+  $statement->bindValue(':email', $email);
+
+  $statement->execute();
+
+  $row = $statement->fetch();
+
+  $statement->closeCursor();
+  
+  $text = "Welcome, " . $row['lastName'] . ", " . $row['firstName'] . "!";
+
+  echo $text;
+  
+  include('index.php');
 
 } else {
 
- if ($username == NULL && $password == NULL) {
+ if ($email == NULL && $password == NULL) {
 
   $login_message ='You must login to view this page.';
 
  } else {
 
   $login_message = 'Invalid credentials.';
+  
 
  }
 
