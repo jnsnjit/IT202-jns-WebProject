@@ -46,6 +46,10 @@ $statement2->closeCursor();
     </head>
     <body>
     <?php include 'header.php' ?>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+        crossorigin="anonymous"></script>
+    <script src ="create.js"></script>
         <h3>Create a New Toy in Database</h3>
         <?php
         if( !empty($error_m) ) {
@@ -54,7 +58,7 @@ $statement2->closeCursor();
             echo "</p>";
         }
         ?>
-        <form action="create_auth.php" method='post'>
+        <form action="create_auth.php" method='post' id="createForm">
             <label for="toyCategories">Choose a category:</label>
             <select name="toyCategory">
             <?php foreach($categories as $category) : ?>
@@ -64,19 +68,23 @@ $statement2->closeCursor();
             </select>
             <br>
             <label>Toy Code: </label>
-            <input type="text" name="toyCode" value=""/>
+            <input type="text" name="toyCode" id="toyCode" value=""/>
+            <span>*</span>
             <br>
             <label>Toy Name: </label>
-            <input type='text' name="toyName" value = ""/>
+            <input type='text' name="toyName" id="toyName" value = ""/>
+            <span>*</span>
             <br>
             <p><label>Toy Description:</label></p>
-            <textarea name="description" rows="4" cols="50" value=""></textarea>
+            <textarea name="description" rows="4" cols="50" id="description" value=""></textarea>
+            <span>*</span>
             <br>
             <label>Toy Price: </label>
-            <input type='text' name='price' value=''/>
+            <input type='text' name='price' id="price" value=''/>
+            <span>*</span>
             <br>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Clear Form">
+            <input type="submit" value="Submit" id="submit_button">
+            <input type="reset" value="Clear Form" id="reset_button">
         </form>
         
         <br>

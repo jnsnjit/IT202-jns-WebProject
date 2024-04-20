@@ -12,6 +12,7 @@ include("check_login.php");
        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
+        <noscript>hey this page uses js, enable it!</noscript>
         <?php include("header.php"); ?>
         <h1>About Us:</h1>
         <!-- mission statement -->

@@ -53,6 +53,10 @@ $statement3->closeCursor();
 
 <!-- the body section -->
 <body>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" 
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+        crossorigin="anonymous"></script>
+  <script src="check_delete.js"></script>
 <main>
   <?php include("header.php"); ?>
     <nav>
@@ -83,13 +87,13 @@ $statement3->closeCursor();
 
       <?php foreach ($toy as $t) : ?>
       <tr>
-        <td><?php echo $t['toyCode']; ?></td>
+        <td><a href="toyProducts_details.php?toy_code=<?php echo $t['toyCode']; ?>" id="toy_code"><?php echo $t['toyCode'];?></a></td>
         <td><?php echo $t['toyName']; ?></td>
         <td><?php echo $t['price']; ?></td>
         <td><?php echo $t['onSale']; ?></td>
         <td><?php echo $t['description']; ?></td>
         <?php if(isset($_SESSION['is_valid_user'])) : ?>
-        <td><form action="delete_toy.php" method="post">
+        <td><form action="delete_toy.php" name="delete_form" id="delete_form" method="post">
           <input type="hidden" name="toy_id" value="<?php echo $t['toyID']; ?>">
           <input type="submit" value="Delete">
         </form></td><?php endif ?>

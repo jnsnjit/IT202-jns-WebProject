@@ -1,5 +1,6 @@
 <?php
-require_once('database_njit.php');
+require_once("database_njit.php");
+$db = getDB();
 
 $toy_id = filter_input(INPUT_POST, 'toy_id',FILTER_VALIDATE_INT);
 

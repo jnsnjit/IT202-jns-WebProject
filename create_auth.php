@@ -30,6 +30,7 @@ if($error_m != '') {
 $price = number_format($price, 2);
 
 require_once('database_njit.php');
+$db = getDB();
 //check if toyCode is unique, sql query
 $query = 'INSERT INTO toy
                  (toyCategoryID, toyCode, toyName, onSale, description, price, dateCreated)

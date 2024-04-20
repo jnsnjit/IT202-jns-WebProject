@@ -2,6 +2,7 @@
 
 function addToyAuth($user, $password,$email,$firstName,$lastName) {
    require_once('database_njit.php');
+   $db = getDB();
    $hash = password_hash($password, PASSWORD_DEFAULT);
    $query = 'INSERT INTO toyAuth(username,passwrd,email,firstName,lastName,dateCreated)
              VALUES (:username,:passwrd,:email,:firstName,:lastName,NOW())';
