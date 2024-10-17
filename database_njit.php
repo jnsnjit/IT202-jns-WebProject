@@ -4,8 +4,8 @@
 <?php
 function getDB() {
     $dsn = 'mysql:host=sql1.njit.edu;port=3306;dbname=jns';
-    $username = 'jns';
-    $password = 'IT202@jimsil';
+    $username = '';
+    $password = '';
     try{
         $db = new PDO($dsn,$username,$password);
         //echo '<p>you are connected to the njit database!</p>';
